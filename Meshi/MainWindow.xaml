@@ -1,0 +1,118 @@
+﻿<Window x:Class="Meshi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Meshi"
+        xmlns:UserControls="clr-namespace:Meshi.View.UserControls"
+        
+        ResizeMode="NoResize"
+    mc:Ignorable="d"
+        Title="Meshi Chart" Height="500" Width="800">
+    <Grid Background="FloralWhite">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="5*"/>
+
+        </Grid.RowDefinitions>
+       
+        
+        <UserControls:MenuBar/>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="30*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Calories" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="40,0,0,0"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Protein" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="40,0,0,0"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Fat" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="40,0,0,0"/>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Carbs" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="40,0,0,0"/>
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Calcium" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="40,0,0,0"/>
+                <TextBlock Grid.Row="5" Grid.Column="0" Text="Iron" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="40,0,0,0"/>
+                <TextBlock Grid.Row="6" Grid.Column="0" Text="Vitamin A" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="40,0,0,0"/>
+                <TextBlock Grid.Row="7" Grid.Column="0" Text="Sodium" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="40,0,0,0"/>
+                <TextBlock Grid.Row="8" Grid.Column="0" Text="Vitamin C" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="40,0,0,0"/>                
+                <!-- Change later to include other input options (grams etc.)-->
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="%" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="5,0,0,0"/>
+                <TextBlock Grid.Row="1" Grid.Column="2" Text="%" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="5,0,0,0"/>
+                <TextBlock Grid.Row="2" Grid.Column="2" Text="%" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="5,0,0,0"/>
+                <TextBlock Grid.Row="3" Grid.Column="2" Text="%" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="5,0,0,0"/>
+                <TextBlock Grid.Row="4" Grid.Column="2" Text="%" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="5,0,0,0"/>
+                <TextBlock Grid.Row="5" Grid.Column="2" Text="%" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="5,0,0,0"/>
+                <TextBlock Grid.Row="6" Grid.Column="2" Text="%" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="5,0,0,0"/>
+                <TextBlock Grid.Row="7" Grid.Column="2" Text="%" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="5,0,0,0"/>
+                <TextBlock Grid.Row="8" Grid.Column="2" Text="%" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="5,0,0,0"/>
+
+                <UserControls:ClearableTextBox Grid.Row="0" Grid.Column="1" Placeholder="Enter"/>
+                <UserControls:ClearableTextBox Grid.Row="1" Grid.Column="1" Placeholder="Enter"/>
+                <UserControls:ClearableTextBox Grid.Row="2" Grid.Column="1" Placeholder="Enter"/>
+                <UserControls:ClearableTextBox Grid.Row="3" Grid.Column="1" Placeholder="Enter"/>
+                <UserControls:ClearableTextBox Grid.Row="4" Grid.Column="1" Placeholder="Enter"/>
+                <UserControls:ClearableTextBox Grid.Row="5" Grid.Column="1" Placeholder="Enter"/>
+                <UserControls:ClearableTextBox Grid.Row="6" Grid.Column="1" Placeholder="Enter"/>
+                <UserControls:ClearableTextBox Grid.Row="7" Grid.Column="1" Placeholder="Enter"/>
+                <UserControls:ClearableTextBox Grid.Row="8" Grid.Column="1" Placeholder="Enter"/>
+            </Grid>
+            <Canvas Grid.Column="1" Height="340" Width="340" >
+                <!--x=170+sin(40*i)*R, y=170-cos(40*i)*R-->
+                <Polygon Points="170,0 279.2738,39.7724 337.4173,140.4798 317.2243,255 228.1434,329.7477 111.8565,329.7477
+                         22.7756,255 2.5826,140.4798 60.7261,39.7724"
+                         Stroke="Black" StrokeThickness="3"/>                
+                <!--x=170+sin(40*i)*42.5, y=170-cos(40*i)*42.5-->
+                <Polygon Points="170,127.5  197.3184,137.4431 211.8543,162.6199 206.8060,191.25 184.5358,209.9369 
+                         155.4641,209.9369 133.1939,191.25 128.1456,162.6199 142.6815,137.4431"
+                         Stroke="Black" StrokeThickness="2"/>
+                <!--x=170+sin(40*i)*102, y=170-cos(40*i)*102-->
+                <Polygon Points="170,68 235.5643,91.8634 270.4503,152.2878 258.3345,221 204.8860,265.8486 135.1139,265.8486
+                         81.6654,221 69.5496,152.2878 104.4356,91.8634"
+                         Stroke="Black" StrokeThickness="2"/>
+            </Canvas>
+            <Canvas Grid.Column="1" Height="340" Width="340" Panel.ZIndex="-1">
+                <Polygon Points="170,0 279.2738,39.7724 337.4173,140.4798 317.2243,255 228.1434,329.7477 111.8565,329.7477
+                         22.7756,255 2.5826,140.4798 60.7261,39.7724"
+                         Fill="White" Panel.ZIndex="-2"/>
+                <Polygon Points="170,0 200,300 100,90"
+                         Stroke="Aqua" StrokeThickness="1" Fill="Aquamarine"/>
+            </Canvas>
+            
+        </Grid>
+    </Grid>
+</Window>
