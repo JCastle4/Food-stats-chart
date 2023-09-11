@@ -25,8 +25,6 @@ namespace Meshi
         private void btnEnter_Click(object sender, RoutedEventArgs e)
         {
             string statsGraph = getGraph();
-            //testing graph
-            //string statsGraph = "170,0 200,300 100,90";
             PointCollection graphing = PointCollection.Parse(statsGraph);
             GraphDrawn.Points = graphing;
 
@@ -45,11 +43,15 @@ namespace Meshi
             string VitaminCInput = getInput(VitaminCNum.txtInput.Text);
             string graph = "";
 
+            //out of 2000 calorie diet
             double x = 170;
             double y = 170-((double.Parse(CaloriesInput) / 2000) * 170);
             graph += x + "," + y + " ";
-            x = calculateX(getH(Double.Parse(ProteinInput)),1);
-            y = calculateY(getH(Double.Parse(ProteinInput)),1);
+
+            //out of 56 gram protein diet
+            double proteinH = Double.Parse(ProteinInput)/56 * 170;
+            x = calculateX(proteinH, 1);
+            y = calculateY(proteinH, 1);
             graph += x + "," + y + " ";
             x = calculateX(getH(Double.Parse(FatInput)), 2);
             y = calculateY(getH(Double.Parse(FatInput)), 2);

@@ -7,7 +7,7 @@
         xmlns:UserControls="clr-namespace:Meshi.View.UserControls"
         
 
-        Title="Meshi Chart" Height="700" Width="1000">
+        Title="Meshi Chart" Height="575" Width="1000">
     <Grid Background="FloralWhite">
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -62,9 +62,9 @@
                 <TextBlock Grid.Row="8" Grid.Column="1" Text="Vitamin C" VerticalAlignment="Center" 
                            HorizontalAlignment="Left" FontSize="16" Margin="40,0,0,0"/>
                 <!-- Change later to include other input options (grams etc.)-->
-                <TextBlock Grid.Row="0" Grid.Column="3" Text="%" VerticalAlignment="Center" 
-                           HorizontalAlignment="Left" FontSize="16" Margin="5,0,0,0"/>
-                <TextBlock Grid.Row="1" Grid.Column="3" Text="%" VerticalAlignment="Center" 
+                <!--TextBlock Grid.Row="0" Grid.Column="3" Text="%" VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" FontSize="16" Margin="5,0,0,0"/-->
+                <TextBlock Grid.Row="1" Grid.Column="3" Text="g" VerticalAlignment="Center" 
                            HorizontalAlignment="Left" FontSize="16" Margin="5,0,0,0"/>
                 <TextBlock Grid.Row="2" Grid.Column="3" Text="%" VerticalAlignment="Center" 
                            HorizontalAlignment="Left" FontSize="16" Margin="5,0,0,0"/>
@@ -91,7 +91,7 @@
                 <UserControls:ClearableTextBox x:Name="SodiumNum" Grid.Row="7" Grid.Column="2" Placeholder="Enter"/>
                 <UserControls:ClearableTextBox x:Name="VitaminCNum" Grid.Row="8" Grid.Column="2" Placeholder="Enter"/>
 
-                <Button Name="btnEnter" Grid.Row="9" Grid.Column="1" Height="25" Width="80"
+                <Button Name="btnEnter" Grid.Row="9" Grid.Column="2" Height="25" Width="80"
                         VerticalAlignment="Top" HorizontalAlignment="Center" 
                         FontSize="16" Click="btnEnter_Click" >
                     <TextBlock Text="Enter" Margin="0,-2,0,0"/>
@@ -103,9 +103,9 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Grid Grid.Column="0">
+                <Grid Grid.Column="0" Margin="0,0,0,80">
 
-                    <Canvas Grid.Column="1" Height="340" Width="340" >
+                    <Canvas Grid.Column="1" Height="340" Width="340">
                         <!--x=170+sin(40*i)*R, y=170-cos(40*i)*R-->
                         <Polygon Points="170,0 279.2738,39.7724 337.4173,140.4798 317.2243,255 228.1434,329.7477 111.8565,329.7477
                          22.7756,255 2.5826,140.4798 60.7261,39.7724"
