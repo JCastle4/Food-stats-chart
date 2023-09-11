@@ -58,9 +58,9 @@ namespace Meshi.View.UserControls
         }
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
-            e.Handled = !_regex.IsMatch(e.Text);
+            e.Handled = !IsTextAllowed(e.Text);
         }
-        private static readonly Regex _regex = new Regex("\\d+");
+        private static readonly Regex _regex = new Regex("[^0-9.-]+");
         private static bool IsTextAllowed(string text)
         {
             return !_regex.IsMatch(text);
