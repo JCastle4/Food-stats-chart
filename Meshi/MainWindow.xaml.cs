@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -53,6 +54,7 @@ namespace Meshi
             x = calculateX(proteinH, 1);
             y = calculateY(proteinH, 1);
             graph += x + "," + y + " ";
+
             x = calculateX(getH(Double.Parse(FatInput)), 2);
             y = calculateY(getH(Double.Parse(FatInput)), 2);
             graph += x + "," + y + " ";
@@ -98,5 +100,19 @@ namespace Meshi
             else return source;
         }
 
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            CaloriesNum.txtInput.Clear();
+            ProteinNum.txtInput.Clear();
+            FatNum.txtInput.Clear();
+            CarbsNum.txtInput.Clear();
+            CalciumNum.txtInput.Clear();
+            IronNum.txtInput.Clear();
+            VitaminANum.txtInput.Clear();
+            SodiumNum.txtInput.Clear();
+            VitaminCNum.txtInput.Clear();
+
+            GraphDrawn.Points.Clear();
+        }
     }
 }

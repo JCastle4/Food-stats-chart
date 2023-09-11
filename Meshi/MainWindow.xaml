@@ -17,8 +17,8 @@
 
         </Grid.RowDefinitions>
 
-
-        <UserControls:MenuBar/>
+        <!--For future updates-->
+        <!--UserControls:MenuBar/-->
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="40*"/>
@@ -91,10 +91,15 @@
                 <UserControls:ClearableTextBox x:Name="SodiumNum" Grid.Row="7" Grid.Column="2" Placeholder="Enter"/>
                 <UserControls:ClearableTextBox x:Name="VitaminCNum" Grid.Row="8" Grid.Column="2" Placeholder="Enter"/>
 
-                <Button Name="btnEnter" Grid.Row="9" Grid.Column="2" Height="25" Width="80"
+                <Button Name="btnEnter" Grid.Row="9" Grid.Column="1" Height="25" Width="80"
                         VerticalAlignment="Top" HorizontalAlignment="Center" 
                         FontSize="16" Click="btnEnter_Click" >
                     <TextBlock Text="Enter" Margin="0,-2,0,0"/>
+                </Button>
+                <Button Name="btnClear" Grid.Row="9" Grid.Column="2" Height="25" Width="80"
+                        VerticalAlignment="Top" HorizontalAlignment="Center" 
+                        FontSize="16" Click="btnClear_Click" >
+                    <TextBlock Text="Clear" Margin="0,-2,0,0"/>
                 </Button>
             </Grid>
             <Grid Grid.Column="1">
